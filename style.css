@@ -324,6 +324,134 @@ body {
   color: rgba(139, 38, 53, 0.45);
 }
 
+/* ─── SECTION ③ TIMELINE ────────────────────────── */
+.section--timeline {
+  justify-content: center;
+  gap: 2rem;
+}
+
+.tl-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(2.6rem, 10vw, 4rem);
+  color: #8B2635;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.timeline {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Ligne verticale centrale */
+.tl-line {
+  position: absolute;
+  left: 50%;
+  top: 12px;
+  bottom: 12px;
+  width: 1px;
+  background: rgba(139, 38, 53, 0.25);
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+/* Item : grille 3 colonnes — gauche | point | droite */
+.tl-item {
+  display: grid;
+  grid-template-columns: 1fr 22px 1fr;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.9rem 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* Colonne gauche : toujours alignée à droite */
+.tl-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+/* Colonne droite : toujours alignée à gauche */
+.tl-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+/* Point cœur sur la ligne */
+.tl-dot {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(139, 38, 53, 0.30);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 7px;
+  color: #8B2635;
+  z-index: 2;
+  position: relative;
+}
+
+/* Icônes SVG */
+.tl-svg {
+  width: 58px;
+  height: 58px;
+  color: rgba(139, 38, 53, 0.75);
+  flex-shrink: 0;
+}
+
+/* Heure */
+.tl-time {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(1.05rem, 4vw, 1.3rem);
+  color: #8B2635;
+  line-height: 1.2;
+}
+
+/* Label */
+.tl-label {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: clamp(0.82rem, 3.2vw, 1rem);
+  color: rgba(139, 38, 53, 0.70);
+  line-height: 1.35;
+  margin-top: 0.15rem;
+}
+
+/* Guinguette : accent doré */
+.tl-time--gold  { color: #B8974F; }
+.tl-label--gold { color: rgba(184, 151, 79, 0.85); }
+
+/* Flèches décoratives */
+.tl-arrow {
+  display: flex;
+  padding: 0 1.2rem;
+  opacity: 0.45;
+  color: #8B2635;
+}
+
+.tl-arrow svg {
+  width: 100%;
+  height: 24px;
+}
+
+.tl-arrow--r { justify-content: flex-end; padding-right: 0; }
+.tl-arrow--l { justify-content: flex-start; padding-left: 0; }
+
 /* ─── ANIMATIONS SCROLL ─────────────────────────── */
 .animate {
   opacity: 0;
