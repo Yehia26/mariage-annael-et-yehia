@@ -137,11 +137,12 @@ body {
 }
 
 .invite {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-style: italic;
+  font-family: 'Cinzel', Georgia, serif;
+  font-style: normal;
   font-weight: 400;
-  font-size: clamp(1.2rem, 5vw, 1.6rem);
-  line-height: 1.45;
+  font-size: clamp(0.85rem, 3.5vw, 1.15rem);
+  letter-spacing: 0.08em;
+  line-height: 1.6;
 }
 
 .noms {
