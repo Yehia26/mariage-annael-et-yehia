@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Cormorant Garamond', Georgia, serif;
-  background-color: #1a1008;
+  background-color: #fff;
 }
 
 /* Fond plein écran */
@@ -15,7 +15,7 @@ body {
   inset: 0;
   background-image: url('images/chateau-de-roquefeuille-aquarelle-3.jpeg');
   background-size: 100% auto;
-  background-position: center top;
+  background-position: center center;
   background-repeat: no-repeat;
   z-index: 0;
 }
