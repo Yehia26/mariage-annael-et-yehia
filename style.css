@@ -37,6 +37,14 @@ body {
 /* Familles — ancrées en haut */
 .familles {
   display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  width: 100%;
+}
+
+/* Grands-parents : deux colonnes côte à côte */
+.grands-parents {
+  display: flex;
   justify-content: space-between;
   width: 100%;
 }
@@ -44,12 +52,27 @@ body {
 .famille {
   font-style: italic;
   font-weight: 300;
-  font-size: 30px;
-  text-align: center;
-  /* line-height: 1.7; */
+  font-size: clamp(0.72rem, 2.6vw, 0.88rem);
+  line-height: 1.8;
 }
 
 .famille--right {
+  text-align: right;
+}
+
+/* Parents : une ligne, côte à côte */
+.parents {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(0.72rem, 2.6vw, 0.88rem);
+  border-top: 1px solid rgba(255,255,255,0.3);
+  padding-top: 0.6rem;
+}
+
+.parent--right {
   text-align: right;
 }
 
