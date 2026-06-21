@@ -55,12 +55,13 @@ body {
   align-items: center;
   padding-right: 2rem;
   padding-left: 2rem;
-  gap: 3rem;
+  gap: 5rem;
 }
 
 /* ─── SECTION ① HERO ────────────────────────────── */
 .section--hero {
   justify-content: space-between;
+  padding-top: max(1rem, env(safe-area-inset-top));
 }
 
 /* Familles */
@@ -498,11 +499,8 @@ body {
 .scroll-hint { pointer-events: none; }
 
 /* ─── SAFE AREA (notch / home bar iPhone) ────────── */
-.section--hero {
-  padding-top:    max(5.5rem, env(safe-area-inset-top));
-}
 .section--rsvp {
-  padding-bottom: max(5.5rem, env(safe-area-inset-bottom));
+  padding-bottom: max(1.5rem, env(safe-area-inset-bottom));
 }
 
 /* ─── BACKDROP-FILTER FALLBACK ──────────────────── */
