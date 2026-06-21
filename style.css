@@ -20,6 +20,7 @@ body {
   z-index: 0;
   will-change: transform;
   transform: translateZ(0);
+  opacity: 0.7;
 }
 
 /* Hero : plein écran, familles en haut, noms au centre, lieu en bas */
