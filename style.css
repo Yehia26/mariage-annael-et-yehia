@@ -115,28 +115,29 @@ body {
 
   /* 8 dégradés = 4 coins en L, chaque ligne s'efface vers transparent */
   background-image:
-    linear-gradient(to right,  rgba(139,38,53,0.55), transparent),
-    linear-gradient(to bottom, rgba(139,38,53,0.55), transparent),
-    linear-gradient(to left,   rgba(139,38,53,0.55), transparent),
-    linear-gradient(to bottom, rgba(139,38,53,0.55), transparent),
-    linear-gradient(to right,  rgba(139,38,53,0.55), transparent),
-    linear-gradient(to top,    rgba(139,38,53,0.55), transparent),
-    linear-gradient(to left,   rgba(139,38,53,0.55), transparent),
-    linear-gradient(to top,    rgba(139,38,53,0.55), transparent);
+    linear-gradient(to right,  rgba(139,38,53,0.75), transparent),
+    linear-gradient(to bottom, rgba(139,38,53,0.75), transparent),
+    linear-gradient(to left,   rgba(139,38,53,0.75), transparent),
+    linear-gradient(to bottom, rgba(139,38,53,0.75), transparent),
+    linear-gradient(to right,  rgba(139,38,53,0.75), transparent),
+    linear-gradient(to top,    rgba(139,38,53,0.75), transparent),
+    linear-gradient(to left,   rgba(139,38,53,0.75), transparent),
+    linear-gradient(to top,    rgba(139,38,53,0.75), transparent);
   background-position:
     top left,    top left,
     top right,   top right,
     bottom left, bottom left,
     bottom right,bottom right;
   background-size:
-    44px 1px, 1px 44px,
-    44px 1px, 1px 44px,
-    44px 1px, 1px 44px,
-    44px 1px, 1px 44px;
+    52px 2px, 2px 52px,
+    52px 2px, 2px 52px,
+    52px 2px, 2px 52px,
+    52px 2px, 2px 52px;
   background-repeat: no-repeat;
 }
 
 .invite {
+  font-family: 'Playfair Display', Georgia, serif;
   font-style: italic;
   font-weight: 400;
   font-size: clamp(1.2rem, 5vw, 1.6rem);
