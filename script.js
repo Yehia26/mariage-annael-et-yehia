@@ -1,22 +1,23 @@
-// ── Fond panoramique : translateX proportionnel au scroll vertical ──
-const bgStrip     = document.getElementById('bgStrip');
+const bgImg       = document.querySelector('#bgZoom img');
+const heroSection = document.querySelector('.section--hero');
 const progressBar = document.getElementById('progressBar');
-const IMG_COUNT   = bgStrip ? bgStrip.querySelectorAll('img').length : 1;
+
+const ZOOM_MAX = 0.42; // scale(1) → scale(1.42) sur la hauteur du hero
 
 function onScroll() {
-  const scrolled   = window.scrollY;
-  const maxScroll  = document.documentElement.scrollHeight - window.innerHeight;
-  if (maxScroll <= 0) return;
+  const scrolled  = window.scrollY;
+  const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
 
-  const progress = Math.min(scrolled / maxScroll, 1);
-
-  if (bgStrip) {
-    const maxTranslate = (IMG_COUNT - 1) * window.innerWidth;
-    bgStrip.style.transform = `translateX(${-progress * maxTranslate}px)`;
+  // Zoom lié au scroll dans la section héro
+  if (bgImg && heroSection) {
+    const heroH = heroSection.offsetHeight;
+    const t     = Math.min(scrolled / heroH, 1);
+    bgImg.style.transform = `scale(${1 + t * ZOOM_MAX})`;
   }
 
-  if (progressBar) {
-    progressBar.style.width = `${progress * 100}%`;
+  // Barre de progression
+  if (progressBar && maxScroll > 0) {
+    progressBar.style.width = `${(scrolled / maxScroll) * 100}%`;
   }
 }
 
@@ -24,7 +25,7 @@ window.addEventListener('scroll', onScroll, { passive: true });
 window.addEventListener('resize', onScroll);
 onScroll();
 
-// ── Animations d'entrée via IntersectionObserver ─────────────────────
+// Animations d'entrée (IntersectionObserver)
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach(entry => {
