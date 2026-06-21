@@ -334,10 +334,10 @@ body {
   color: rgba(139, 38, 53, 0.45);
 }
 
-.ornement-star {
-  width: 16px;
-  height: 16px;
-  color: rgba(139, 38, 53, 0.55);
+.ornement-icon {
+  height: 22px;
+  width: auto;
+  color: rgba(139, 38, 53, 0.60);
   flex-shrink: 0;
 }
 
