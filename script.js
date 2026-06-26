@@ -89,9 +89,9 @@ function startMusic() {
 }
 
 // Listeners persistants jusqu'au succès (iOS + Android Chrome + Samsung Internet)
-document.addEventListener('touchstart', startMusic, { passive: true });
-document.addEventListener('touchend',   startMusic, { passive: true });
-document.addEventListener('click',      startMusic, { passive: true });
+document.addEventListener('pointerdown', startMusic, { passive: true });
+document.addEventListener('touchend',    startMusic, { passive: true });
+document.addEventListener('click',       startMusic, { passive: true });
 
 // Bouton : toggle mute / unmute
 if (musicBtn) {
